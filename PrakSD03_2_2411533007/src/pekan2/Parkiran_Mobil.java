@@ -1,4 +1,4 @@
-package ex;
+package tugas;
 import java.util.*;
 
 class Mobil {											// Mendefinisikan class mobil
