@@ -2,7 +2,6 @@ package pekan3;
 import java.util.Scanner;
 import java.util.Stack;
 
-// Class Buku: menyimpan judul buku
 class Buku {
     private String judul; // atribut judul buku
 
@@ -17,9 +16,8 @@ class Buku {
     }
 }
 
-// Class PerpustakaanMini: simulasi tumpukan buku LIFO menggunakan Stack
 public class PerpustakaanMini {
-    private Stack<Buku> tumpukanBuku; // struktur data LIFO untuk buku
+    private Stack<Buku> tumpukanBuku; // struktur data LIFO
 
     // Konstruktor: inisialisasi tumpukan dan tambah 7 buku awal
     public PerpustakaanMini() {
@@ -33,13 +31,13 @@ public class PerpustakaanMini {
         tumpukanBuku.push(new Buku("Kecerdasan Buatan"));
     }
 
-    // Method tambahBuku: menambahkan buku ke atas tumpukan
+    // Method tambahBuku : menambahkan buku ke tumpukan
     public void tambahBuku(Buku buku) {
         tumpukanBuku.push(buku);
         System.out.println("Buku \"" + buku.getJudul() + "\" berhasil ditambahkan ke tumpukan.");
     }
 
-    // Method ambilBuku: mengambil buku teratas dari tumpukan
+    // Method ambilBuku : mengambil buku teratas dari tumpukan
     public void ambilBuku() {
         if (tumpukanBuku.isEmpty()) {
             System.out.println("Tumpukan kosong, tidak ada buku untuk diambil.");
@@ -49,7 +47,7 @@ public class PerpustakaanMini {
         }
     }
 
-    // Method lihatTumpukan: menampilkan semua buku di tumpukan
+    // Method lihatTumpukan : menampilkan list buku di tumpukan
     public void lihatTumpukan() {
         if (tumpukanBuku.isEmpty()) {
             System.out.println("Tumpukan kosong.");
@@ -61,7 +59,7 @@ public class PerpustakaanMini {
         }
     }
 
-    // Method cariBuku: memeriksa apakah judul tertentu ada di tumpukan
+    // Method cariBuku : memeriksa apakah judul terdapat pada tumpukan
     public void cariBuku(String judul) {
         boolean ditemukan = false;
         for (Buku b : tumpukanBuku) {
@@ -77,12 +75,10 @@ public class PerpustakaanMini {
         }
     }
 
-    // Main: interaktif dengan Scanner
     public static void main(String[] args) {
         Scanner console = new Scanner(System.in);
-        PerpustakaanMini lib = new PerpustakaanMini(); // buat instance
+        PerpustakaanMini lib = new PerpustakaanMini(); 
         int pilihan;
-
         do {
             // Tampilkan menu
             System.out.println("=== MENU PERPUSTAKAAN MINI ===");
@@ -93,13 +89,11 @@ public class PerpustakaanMini {
             System.out.println("5. Keluar");
             System.out.print("Pilihan: ");
             pilihan = console.nextInt();
-            console.nextLine(); // clear newline
-
-            // Proses pilihan
+            console.nextLine(); 
             switch (pilihan) {
                 case 1:
                     System.out.print("Masukkan judul buku: ");
-                    String judulTambah = console.nextLine().trim(); // hilangkan whitespace
+                    String judulTambah = console.nextLine();
                     if (judulTambah.isEmpty()) {
                         System.out.println("Tolong inputkan judul buku.");
                     } else {
@@ -114,7 +108,7 @@ public class PerpustakaanMini {
                     break;
                 case 4:
                     System.out.print("Masukkan judul buku yang dicari: ");
-                    String judulCari = console.nextLine().trim();
+                    String judulCari = console.nextLine();
                     if (judulCari.isEmpty()) {
                         System.out.println("Tolong inputkan judul buku yang dicari.");
                     } else {
@@ -122,12 +116,12 @@ public class PerpustakaanMini {
                     }
                     break;
                 case 5:
-                    System.out.println("Keluar dari program. Terima kasih!");
+                    System.out.println("Keluar dari program.");
                     break;
                 default:
-                    System.out.println("Pilihan tidak valid. Silakan coba lagi.");
+                    System.out.println("Pilihan tidak valid. Coba lagi !");
             }
-            System.out.println(); // spasi
+            System.out.println();
         } while (pilihan != 5);
 
         console.close();
