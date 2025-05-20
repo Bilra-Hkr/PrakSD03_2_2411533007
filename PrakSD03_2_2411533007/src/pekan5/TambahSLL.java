@@ -1,4 +1,4 @@
-package pekan4;
+package pekan5;
 
 public class TambahSLL {
 	public static NodeSLL insertAtFront(NodeSLL head, int value) {
