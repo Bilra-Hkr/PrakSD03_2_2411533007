@@ -1,4 +1,4 @@
-package pekan4;
+package pekan5;
 
 public class NodeSLL {
 		//Node bagian data
