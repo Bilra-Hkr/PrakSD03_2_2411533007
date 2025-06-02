@@ -1,4 +1,4 @@
-package ex;
+package 4;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
