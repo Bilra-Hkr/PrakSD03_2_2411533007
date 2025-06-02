@@ -1,4 +1,4 @@
-package ex;
+package 6;
 import java.util.Scanner;
 
  class ItemBelanja {
