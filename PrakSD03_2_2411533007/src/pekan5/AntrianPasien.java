@@ -1,4 +1,4 @@
-package ex;
+package 5;
 import java.util.Scanner;
 
 public class AntrianPasien {
