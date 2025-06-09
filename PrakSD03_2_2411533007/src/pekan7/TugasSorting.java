@@ -1,4 +1,4 @@
-package ex;
+package pekan7;
 
 public class TugasSorting {
     // Function Bubble Sort urutan ascending
