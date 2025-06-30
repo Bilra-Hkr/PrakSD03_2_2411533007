@@ -1,4 +1,4 @@
-package ex;
+package pekan9;
 import java.util.*;
 //Nama : Deriel Chaerahman
 //NIM : 2411533007
